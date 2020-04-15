@@ -1,0 +1,14 @@
+{% extends 'ultrasonic/base.html' %}
+{% block content %}
+<div class="container">
+    <form method="get">
+        <input type="number" name="value">
+        <button type="submit">Adicionar</button>
+    </form>
+    {% for ultrasonic in ultrasonics %}
+    <ul class="list-group">
+        <li class="list-group-item">{{ultrasonic.id}} = {{ultrasonic.value}}</li>
+    </ul>
+    {% endfor %}
+</div>
+{% endblock %}
