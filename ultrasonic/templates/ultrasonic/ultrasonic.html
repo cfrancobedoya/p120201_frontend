@@ -2,12 +2,23 @@
 {% block content %}
 <div class="container">
     <form method="get">
-        <input type="number" name="value">
+        <br>
+        <label>Valor:</label> <input type="number" name="value"><br>
+        <label>Latitud del lugar:</label> <input type="number" step="any" name="placeLatitude"><br>
+        <label>Longitud del lugar:</label> <input type="number" step="any" name="placeLength"><br>
+        <label>Tipo de terreno:</label> <input type="text" name="landArea"><br>
         <button type="submit">Adicionar</button>
+        <hr>
     </form>
     {% for ultrasonic in ultrasonics %}
     <ul class="list-group">
-        <li class="list-group-item">{{ultrasonic.id}} = {{ultrasonic.value}}</li>
+        <li class="list-group-item">
+            ID = {{ultrasonic.id}} <br>
+            Valor = {{ultrasonic.value}} <br>
+            Latitud del lugar = {{ultrasonic.placeLatitude}} <br>
+            Longitud del lugar = {{ultrasonic.placeLength}} <br>
+            Tipo de terreno = {{ultrasonic.landArea}}
+        </li>
     </ul>
     {% endfor %}
 </div>
