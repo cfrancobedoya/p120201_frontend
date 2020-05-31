@@ -22,12 +22,12 @@ def ultrasonic(request):
                 'placeLength': placeLength,
                 'landArea': landArea,
             }
-            response = requests.post('http://127.0.0.1:8000/ultrasonics/', args)
+            response = requests.post('http://backendpython.azurewebsites.net/ultrasonics/', args)
             # Convierte la respuesta en JSON
             ultrasonic_json = response.json()
 
     # Realiza una petición GET al Web Services
-    response = requests.get('http://127.0.0.1:8000/ultrasonics/')
+    response = requests.get('http://backendpython.azurewebsites.net/ultrasonics/')
     # Convierte la respuesta en JSON
     ultrasonics = response.json()
     # Rederiza la respuesta en el template measure
